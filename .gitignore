@@ -1,0 +1,54 @@
+# visual studio
+
+*.bak 
+*.cache
+*.csproj.user
+*.dll 
+*.log 
+*.obj 
+*.resharper
+*.resharper.user
+*.suo
+*.swp 
+*.user 
+*ReSharper* 
+*resharper* 
+_ReSharper.*
+~$*
+
+# build & output
+Build
+bin
+bin/*
+debug-config
+deploy
+deploy/*
+dist
+obj
+
+# misc
+**/launchSettings.json
+*.pdb
+*DotSettings*
+*Git Bash*
+/NuGet.Config
+/build.current
+CopyEY.ps1
+_compareTemp 
+_notes 
+aspnet_client 
+client*location
+httpd.parse.errors 
+misc/ClearAllDbsMbb-SBB.cmd
+misc/ClearAllDbsMbbNovShared.cmd
+node_modules
+packages
+robocopy.log
+src/**/*.GhostDoc.xml
+UpgradeLog*.htm
+src/.idea
+legacy-upgrade/.idea/**/*
+src/**/.idea/
+src/**/.idea/**/*
+*.v2
+.vs
