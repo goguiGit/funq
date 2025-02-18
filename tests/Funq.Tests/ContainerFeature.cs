@@ -101,4 +101,22 @@ public class ContainerFeature
 
         Assert.That(bar2, Is.Not.Null);
     }
+
+    [Test]
+    public void Constructors_Argument_Passed_On_Resolve()
+    {
+        // Arrange
+        const string expectedArg1 = "arg1";
+        var container = new Container();
+
+        container.Register<IBar, string, bool>((_, arg, boolValue) => new Bar(arg, boolValue));
+
+        // Act
+        var bar = container.Resolve<IBar, string, bool>(expectedArg1, true) as Bar;
+
+        // Assert
+        Assert.That(bar, Is.Not.Null);
+        Assert.That(bar.Arg1, Is.EqualTo(expectedArg1));
+        Assert.That(bar.Arg2, Is.True);
+    }
 }
